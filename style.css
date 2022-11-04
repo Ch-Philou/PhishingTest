@@ -1,0 +1,367 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+    background-color: black ;
+	color: white;
+}
+
+/************************
+ * HTML Link Decoration *
+ ************************/
+a:link{
+	text-decoration: none;
+	color:  #48c9b0  ;
+}
+a:visited{
+	text-decoration: none;
+	color: #48c9b0 ;
+}
+a:active {
+	text-decoration: none;
+	color: #48c9b0;
+}
+a:hover {
+	text-decoration: bold;
+	color: #ff8100;
+}
+/********************
+ * Global and Title *
+ ********************/
+table{
+	margin:0px auto;
+	border-style:solid;
+	border-width:1px;
+	border-color:White;
+} 
+table td{
+	border-style:solid;
+	border-width:1px;
+	border-color:White;
+}
+.Personalize{
+	font-size: 14px;
+ }
+.Question{
+	font-size: 14px;
+	color: orange;
+ }
+.Response{
+	width:400Px;
+	font-size: 14px;
+	text-align: center;
+	border-width:0px;
+ }
+ .Response caption {
+	font-size: 14px;
+	color: orange;
+ }
+ .Response td{
+	border-width:0px;
+ }
+ .Explanation{
+	width:100%;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	border-width:0px;
+ }
+ .Explanation td{
+	border-width:0px;
+ }
+.Loading{
+   width:300Px;
+   border-width:0px;
+   text-align: center;
+   -webkit-animation: color-change 0.25s infinite;
+   -moz-animation: color-change 0.25s infinite;
+   -o-animation: color-change 0.25s infinite;
+   -ms-animation: color-change 0.25s infinite;
+   animation: color-change 0.25s infinite;
+   margin-left: auto;
+   margin-right: auto;
+}
+.Sample{
+   width:90%;
+   border-style:solid;
+   border-width:1px;
+   border-color:orange;
+   margin-left: auto;
+   margin-right: auto;
+}
+.Sample td{
+	padding: 7;
+}
+.Sample_Headers{
+	width: 400Px;
+	height: 300px;
+	overflow: auto;
+}
+.Termination{
+	width:400Px;
+	border-style:solid;
+	border-width:1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.Termination td{
+	padding: 20Px;
+	border-width:0px;
+}
+.Footer{
+   width:100%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   color: salmon;
+}
+/* Section des style d edebug et error */
+.log{
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+	border-style:solid;
+	border-width:2px;
+	border-color:white;
+    color: white;
+    background-color: black ;
+    height: 200Px;
+    overflow:auto;
+    overflow-y: scroll;
+}
+.error{
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+	border-style:solid;
+	border-width:2px;
+	border-color:red;
+    color: red;
+}
+
+.outlook{
+	width: 1152Px;
+    min-height:400px;
+    max-height:900px;
+	margin-left: auto;
+	margin-right: auto;
+    background-color: #262626 ;
+	
+	border-style:solid;
+	border-width:1px;
+	border-color:white;
+}
+.outlook .head {
+    position: relative; 
+	width: 1150Px;
+	height: 281Px;
+	top: 0Px;
+	left: 1Px;
+	background-image: url('img/Outlook_head.png');
+	background-repeat: no-repeat;
+}
+.outlook .head .titleh{
+    position: relative; 
+	width: 792px;
+	top: 18Px;
+	left: 576Px;
+	font-size: 16px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.outlook .head .titlel{
+    position: relative; 
+	width: 1100px;
+	height: 20Px;
+	top: 164Px;
+	left: 20Px;
+	font-size: 19px;
+}
+.outlook .head .from{
+    position: relative; 
+	width: 600px;
+	top: 177Px;
+	left: 80Px;
+	font-size: 14px;
+}
+.outlook .head .to{
+    position: relative; 
+	width: 580px;
+	top: 185Px;
+	left: 95Px;
+	font-size: 14px;
+}
+.outlook .head .date{
+    position: relative; 
+	width: 147px;
+	top: 170Px;
+	left: 980Px;
+	font-size: 12px;
+	text-align: right;
+}
+
+.outlook .middle {
+    position: relative;
+}
+
+.outlook .middle .body{
+    position: relative;
+	bottom: 20 px;
+
+	width: 1127px;
+    min-height:150px;
+    max-height:550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3Px;
+
+	font-size: 12px;
+    overflow:auto;
+    overflow-x: auto;
+    overflow-y: auto;
+	padding: 3Px;
+/* 	
+	border-style:solid;
+	border-width:2px;
+	border-color:red; */
+
+}
+
+.android{
+	width: 360Px;
+    height:619px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 12px;
+	color : #E2E3E5;
+    background-color: #1B1C1E ;
+	
+	background-image: url('img/Android.png');
+	background-repeat: no-repeat;
+	border-style:solid;
+	border-width:1px;
+	border-color:white;
+}
+.android .sms_head{
+	top: 0Px;
+	left: 0Px;
+	width: 360Px;
+	height:85px;
+/* 
+	border-style:solid;
+	border-width:2px;
+	border-color:red; */
+}
+.android .sms_head .hour_top{
+    position: relative; 
+	top: 10Px;
+	left: 17Px;
+	font-size: 10px;
+}
+.android .sms_head .sms_num_exp{
+    position: relative; 
+	top: 33Px;
+	left: 45Px;
+	font-size: 16px;
+}
+.android .sms_data{
+	position: relative;
+	bottom: -230Px;
+	left: 0Px;
+
+	/* height: 380px; */
+	/* width: 360Px;
+	border-style:solid;
+	border-width:2px;
+	border-color:blueviolet; */
+}
+
+.android .sms_data .dayhour_start{
+    position: relative;
+
+	bottom: 5Px;
+	text-align: center;
+	font-size: 14px;
+}
+.android .sms_data .sms_exp{
+    position: relative;
+
+    height:60px;
+	bottom: 5Px;
+	
+	left: 0Px;
+	vertical-align: middle;
+	font-size: 14px;
+	text-align: center;
+    background-color: #202529 ;
+}
+.android .sms_data .SMS_text{
+    position: relative; 
+	width: 263Px;
+	left: 53Px;
+	bottom: 0 Px;
+	
+	padding: 10px;
+	font-size: 14px;
+	color: #E2E3E5;
+
+	background-color: #303133;
+	border-radius: 20px;
+}
+
+.android .sms_data .dayhour_received{
+    position: relative; 
+	bottom: -5Px;
+	left: 60Px;
+	font-size: 10px;
+}
+
+.headers{
+	width: 1127px;
+	height: 30Px;
+	font-size: 12px;
+    overflow:auto;
+    overflow-x: auto;
+    overflow-y: auto;
+	margin-top: 5Px;
+	padding: 3Px;
+	
+	border-style:solid;
+	border-width:2px;
+	border-color:grey;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.none{
+	width: 0px;
+	height: 0Px;
+	font-size: 0px;
+}
+
+
+@-webkit-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@-moz-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@-ms-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@-o-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}

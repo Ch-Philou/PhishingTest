@@ -1,0 +1,127 @@
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="refresh" content="3600" >
+    <title>PhishTest</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <br>
+    <table class="Personalize"  id="Personalize">
+        <caption>Vous pouvez rendre ce jeu plus
+            concret en le personnalisant.</caption>
+        <tr>
+            <td width="100" id="pUserName">Votre nom:</td>
+            <td width="200" id="UserName"></td>
+            <td width="100" rowspan="2">
+                <button id="Btn_Personalize">Personnaliser</button>
+                <button id="Btn_Reset">Relancer</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="pEmail">Votre email:</td>
+            <td id="Email"></td>
+        </tr>
+    </table>
+    <br>
+    <table class="Explanation" id="Explanation">
+        <tr><td id ="pExplanation">
+            Les éléments en <font color='green'>[vert]</font> sont à prendre en compte ayant une valeur crédible:<br>
+        un nom de collègue, un de vos vieux mot de passe, un site que vous fréquentez...
+        </td></tr>
+        <tr id="Line_Btn_Next"><td>
+            <button id="Btn_Next">Suivant</button>
+        </td></tr>
+        <tr><td id="Exp_Infos">
+            Questions a/b
+        </td></tr>
+    </table>
+    <table class="Loading" id="Loading">
+        <tr>
+            <td id="pLoading">Chargement d'un exemple...</td>
+        </tr>
+    </table>
+    <div class="outlook" id="Sample_eMail">
+        <div class="head" id="head">
+            <div class="titleh" id="Sample_Object"> Titre du mail super long pour voir le centrage svp</div>
+            <div class="titlel" id="Sample_Object_2"> Titre du mail super long pour voir le centrage svp</div>
+            <div class="from" id="Sample_Sender">email_source@domaine_crote.fr</div>
+            <div class="to" id="Sample_Destination">email_destinataire@domaine_crote.fr</div>
+            <div class="date" id="Sample_Date">ven. 28/10/2022 18:30</div>
+        </div>
+        <div class="middle" id="body">
+            <div class="body" id="Sample_Body">blabla</div>
+        </div>
+    </div>
+    <div class="android" id="Sample_SMS">
+        <div class="sms_head" id="sms_head">
+            <div class="hour_top" id="hour_top">10:28</div>
+            <div class="sms_num_exp" id="sms_num_exp">+33 (0)6 xx xx xx xx</div>
+        </div>
+        <div class="sms_data" id="sms_data">
+            <div class="dayhour_start" id="dayhour_start">lundi &#8226; 10:28</div>
+            <div class="sms_exp" id="sms_exp"><br>&Eacute;change de SMS/MMS avec 06 xx xx xx xx<br></div>
+            <div class="SMS_text" id="SMS_text">Ceci est l'emplacement du texte du SMS. Il a de très forte chances d'apparatire sur plusieurs ligne, et il fut les caler par ordre inverse... Bonne chance</div>
+            <div class="dayhour_received" id="dayhour_received">lun. 10:28</div>
+        </div>
+    </div>
+    <div class="headers" id="Headers_Area">
+        <button id="Btn_ShowHeaders">Voir</button>
+        <div id="Sample_Headers" class="Sample_Headers">Headers</div>
+    </div>
+    <table class="Response" id="Response">
+        <caption id="Question">Ceci est il un phishing?</caption>
+        <tr>
+            <td width="50%"><button id="Btn_rep_phishing">Oui, phishing</button></td>
+            <td width="50%"><button id="Btn_rep_notphishing">Non, pas phishing</button></td>
+        </tr>
+    </table>
+    <div id="Termination">
+        <table class="Termination" >
+            <tr>
+                <td id="Result"></td>
+            </tr>
+            <tr>
+                <td id="pTermination">
+                    Nous espérons que cela vous a aidé à affuter votre cybervigilance.<br>
+                    Rappel des actions à faire:
+                    <ul>
+                        <li>Regarder l'expiteur réel</li>
+                        <li>Regarder les liens (survoler sans cliquer)</li>
+                        <li>Regarder le format des picesjointes (pdf, xls, doc, exe...)</li>
+                        <li>La cohérence des inforamtions (titre, texte, expéditeur...)</li>
+                    </ul>
+                    Plus globalement:
+                    <ul>
+                        <li>Réfléchir avant de cliquer, votre carte bleue vaut bien 30s</li>
+                        <li>SMS Louche: transféré le au 33700 (service gratuit)</li>
+                        <li>Inscrire tous vos emails sur <a href='https://haveibeenpwned.com'>HaveIBeenPwned</a></li>
+                        <li>Un mot de passe par site, et <a href='https://keepass.info/'>Keepass</a> pour les rassembler tous</li>
+                    </ul>
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <p class="Footer" id="Footer">
+        Jeux sans obligation d'achat. Le but est de vous entrainer à ne plus être phishé.<br>
+        Ce jeux est 100% dans votre navigateur, nous n'avons pas les éléments que vous renseignez.
+    </p>
+    <br>
+    <p align="left" class="log" id="logger">
+        Log is here...
+    </p>
+    <br>
+    <p align="left" class="error" id="error">
+        error is here...
+    </p>
+    <div class="none" id="Sample_Level"></div>
+    <div class="none" id="Sample_Phishing"></div>
+    <div class="none" id="Sample_AnswerBad"></div>
+    <div class="none" id="Sample_AnswerGood"></div>
+  <script type="text/javascript" src="lang_fr.js"></script>
+  <script type="text/javascript" src="PhishTest.js"></script>
+  </body>
+</html>
