@@ -7,7 +7,7 @@ var messages = {
     personalize_name : "Votre nom:",
     personalize_email : "Votre email:",
     // Section explanation
-    explanation: "Les &eacute;l&eacute;ments en <font color='green'>[vert]</font> sont &agrave; prendre en compte ayant une valeur cr&eacute;dible:<br>un nom de coll&egrave;gue, un de vos vieux mot de passe, un site que vous fr&eacute;quentez...",
+    explanation: "Les &eacute;l&eacute;ments en <font color='green'>[vert]</font> sont &agrave; prendre en compte ayant une valeur cr&eacute;dible:<br>un nom de coll&egrave;gue (patrick de la compta), un de vos vieux mot de passe, un site que vous fr&eacute;quentez, votre adresse postale...",
     explanation_btn: "Suivant",
     explanation_stp: "Questions #pending#/#total#",
     // Section Loading
@@ -25,7 +25,8 @@ var messages = {
     TerminationText : "Nous esp&eacute;rons que cela vous a aid&eacute; &agrave; affuter votre cybervigilance.<br>Rappel des actions &agrave; faire:<ul><li>Regarder l'exp&eacute;diteur r&eacute;el</li><li>Regarder les liens (survoler sans cliquer)</li><li>Regarder le format des pi&egrave;ces jointes (pdf, xls, doc, exe...)</li><li>La coh&eacute;rence des informations (titre, texte, exp&eacute;diteur...)</li></ul>Plus globalement:<ul><li>R&eacute;fl&eacute;chir avant de cliquer, votre carte bleue vaut bien 30s</li><li>SMS Louche: transf&eacute;rez le au 33700 (service gratuit)</li><li>Inscrire tous vos emails sur <a href='https://haveibeenpwned.com'>HaveIBeenPwned</a></li><li>Un mot de passe par site, et <a href='https://keepass.info/'>Keepass</a> pour les rassembler tous</li></ul>",
 
     // Section Footer
-    Footer: "Jeux sans obligation d'achat. Le but est de vous entrainer &agrave; ne plus &ecirc;tre phish&eacute;.<br>Ce jeu est 100% dans votre navigateur,totalement anonyme, nous n'avons pas les &eacute;l&eacute;ments que vous renseignez",
+    Footer: "Jeux sans obligation d'achat. Le but est de vous entrainer &agrave; ne plus &ecirc;tre phish&eacute;.<br>Ce jeu est 100% dans votre navigateur,totalement anonyme, nous n'avons pas les &eacute;l&eacute;ments que vous renseignez.<br>(<a href='https://github.com/Ch-Philou/PhishingTest' target='_gitcode'>Show me the code</a>)",
+    Footer_logged: "Jeux sans obligation d'achat. Le but est de vous entrainer &agrave; ne plus &ecirc;tre phish&eacute;.<br><font color='red'>Les données sont sauvegardées</font> (formulaire, résultat, temps, @IP).<br>(<a href='https://github.com/Ch-Philou/PhishingTest' target='_gitcode'>Show me the code</a>)",
     // Section logger
     // Section error
 

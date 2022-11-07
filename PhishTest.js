@@ -1,6 +1,22 @@
 
+/* Parameters that can be mobified by yourself */
+
+// Variable Debug help (guess it ) debugging of course.
 var debug = 0;
+//    0 Mean normal, production.
+//    1-10 the higher, the more log you have...
+
+// Test Length: how many samples in your test
 var Test_Length = 10;
+//    10 is a good production mode
+//    to debug 2 is good
+
+// this function save results (time, IP, given name, given IP...) into a data.csv, require php
+var SaveStat = false;
+//    This was requested by a colleag to perfom a loterry on correct answer :)
+
+
+/* Do not change after this */
 const starttime = Date.now();
 var explanation_time = 0;
 var IsExplaining = false;
@@ -44,31 +60,25 @@ function AddTime(){
 }
 setInterval(AddTime,100);
 
+var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
 
-function decodeBase64(s) {
-  var e={},i,b=0,c,x,l=0,a,r='',w=String.fromCharCode,L=s.length;
-  var A="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  for(i=0;i<64;i++){e[A.charAt(i)]=i;}
-  for(x=0;x<L;x++){
-      c=e[s.charAt(x)];b=(b<<6)+c;l+=6;
-      while(l>=8){((a=(b>>>(l-=8))&0xff)||(x<(L-2)))&&(r+=w(a));}
-  }
-  return r;
-}
+
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function Personalize(){
-  SetDisplay("Sample_eMail","none");
-  SetDisplay("Sample_SMS",	"none");
-  SetDisplay("Termination", "none");
-  SetDisplay("Loading",		  "none");
-  SetDisplay("Response",	  "none");
   SetDisplay("Explanation",	"none");
-  SetDisplay("logger",		  "none");
-  SetDisplay("error",		    "none");
+  // SetDisplay("Loading",		  "none");
+  // SetDisplay("Sample_eMail","block");
+  // SetDisplay("Sample_SMS",	"block");
+  // SetDisplay("Headers_Area",	"none");
+  // SetDisplay("Response",	  "none");
+  // SetDisplay("Termination", "none");
+  // SetDisplay("logger",		  "none");
+  // SetDisplay("error",		    "none");
+  
 
   if(debug>0){log(" - - > Asking User Name");}
   User = prompt("Veuillez entrer NOM Prenom:\n(Cette donnée reste dans votre navigateur)", User);
@@ -90,7 +100,8 @@ function Personalize(){
   }else{
     alert("Valeurs saisies vide.");
   }
-  location.reload();
+  // location.reload();
+  main();
 }
 
 /* Function Logging */
@@ -249,7 +260,7 @@ function Load_To_Table(OneSample){
     if(OneSample.Body.includes("<")){
       HTML_Body_Content += replaceTAG(OneSample.Body);
     }else{
-      HTML_Body_Content += replaceTAG(decodeBase64(OneSample.Body));
+      HTML_Body_Content += replaceTAG(Base64.decode(OneSample.Body));
     }
     SetHTML("Sample_Body",    HTML_Body_Content);
     
@@ -307,8 +318,10 @@ function Load_To_Table(OneSample){
   SetHTML("Sample_AnswerGood",    replaceTAG(OneSample.AnswerGood));
 
   if(debug>1){log("    -> Level Update : "+OneSample.Level)}
-  SetHTML("Sample_Level",    OneSample.Level);
-  
+  SetText("Sample_Level",    OneSample.Level);
+
+  if(debug>1){log("    -> Style Update : "+OneSample.Style)}
+  SetText("Sample_Style",    OneSample.Style);
 }
 
 /* JSON function */
@@ -334,18 +347,12 @@ function LoadFile(JSON_Fic,num=0){
         return response.json();
       })
       .then((data) => {
-        
-        // document.cookie = "Total=" + data.length + CookieSecur;
-        
         //We have to select only Test_Length sample, randomly
-        final_list = shuffle(data).splice(0, 10); 
-        // for (var i = 0; i < Test_Length; i++) {
-          
-        //   var indice = Math.floor(Math.random() * data.length)
-        //   var randomElement = data[indice];
-        //   randomElement.splice(indice, 1); 
-        //   final_list[i]=randomElement;
-        // }
+        if(Test_Length>data.length){
+          log("Less sample(s) than lenght specified at the JS beginning, we set it to json's length...");
+          Test_Length=data.length;
+        }
+        final_list = shuffle(data).splice(0, Test_Length); 
         
         Total = final_list.length;
         SetHTML("Exp_Infos",replaceTAG(messages.explanation_stp));
@@ -405,7 +412,16 @@ function Finished(){
   if(debug>1){log("Showing result text");}
   var millis = Date.now() - starttime;
   let chronometre = Math.floor((millis-explanation_time) / 1000);
-  SetHTML("Result","Le jeux/test est fini cher(e) "+User+"<br>Vous avez "+(parseInt(Success))+"/"+(parseInt(Total))+" en "+chronometre+" secondes.<br>"+comment);
+
+  if(SaveStat){
+    // URL de sauvagarde ./image.php?a=<base64 du resultat>
+    stats = User+";"+parseInt(Success)+";"+parseInt(Total)+";"+chronometre;
+    var img_txt = '<img src="./image.php?a='+Base64.encode(stats)+'" />';
+    SetHTML("Result","Le jeux/test est fini cher(e) "+User+"<br>Vous avez "+(parseInt(Success))+"/"+(parseInt(Total))+" en "+chronometre+" secondes.<br>"+comment+"<br>"+img_txt);
+  }else{
+    SetHTML("Result","Le jeux/test est fini cher(e) "+User+"<br>Vous avez "+(parseInt(Success))+"/"+(parseInt(Total))+" en "+chronometre+" secondes.<br>"+comment);
+  }
+  
 }
 
 /* Main idea */
@@ -415,6 +431,9 @@ function main(){
   // CookieInit();
   SetHTML("UserName",User);
   SetHTML("Email",Email);
+
+  if(SaveStat){SetHTML("Footer",            messages.Footer_logged);}
+
   AddListener();
   SetDisplay("Termination",        "none");
   SetDisplay("Sample_Headers",     "none");

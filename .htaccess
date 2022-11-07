@@ -1,0 +1,8 @@
+AddDefaultCharset utf-8
+Options -Indexes
+php_value open_basedir "/var/www/html/Didactic/JeuxPhishing_Outlook"
+
+<Files "*.csv">  
+  Order allow,deny
+  Deny from all
+</Files>

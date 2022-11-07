@@ -205,7 +205,7 @@
         "Attachements":"",
         "Phishing":true,
         "AnswerBad":"Envoyé d'un numéro 06, un lien sans .gouv, un numéro en 09... Et 'isncriptions limitées' pour un service de l'état? Clairement, une arnaque",
-        "AnswerGood":"Un numéro 06, un lien sans .gouv, un numéro en 09. Bien vue, c'est une arnaque",
+        "AnswerGood":"Un numéro 06, un lien sans .gouv, un numéro en 09. Bien vu, c'est une arnaque",
         "Level":"Haut",
         "Style":"android"
     }
