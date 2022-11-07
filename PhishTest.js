@@ -8,7 +8,7 @@ var CookieSecur = "; samesite=strict; max-age =3600; Secure=true;";
 var Samples = [];
 
 //
-var fun_name=[  "ONYME Anne",    "TOMBALE Pierre",    "Sandra JAIFROIS",    "TERRIEUR Alex",    "HERPIERRE Axelle",    "MANVUSSA Gérard"];
+var fun_name=[  "ONYME Anne",    "TOMBALE Pierre",    "JAIFROIS Sandra",    "TERRIEUR Alex",    "HERPIERRE Axelle",    "MANVUSSA Gérard"];
 var fun_mail=[  "anne@onyme.fr", "pierre@tombale.fr", "sandra@jaifrois.fr", "alex@terrieur.fr", "axelle@herpeirre.fr", "gérard@manvussa.fr"];
 var indice = Math.floor(Math.random() * fun_name.length);
 var User = fun_name[indice];
@@ -45,52 +45,6 @@ function AddTime(){
 setInterval(AddTime,100);
 
 
-
-/* Cookie handling */
-function getCookie(key) {
-  var cookieArr = document.cookie.split(";");
-  for(var i = 0; i < cookieArr.length; i++) {
-      var cookiePair = cookieArr[i].split("=");
-      if(debug>1){log(" - - > Check "+cookiePair[0].trim());}
-      if(key == cookiePair[0].trim()) {
-        if(debug>2){log(" - - > Found "+key);}
-        if(debug>2){log(" - - > Return  "+decodeURIComponent(cookiePair[1]));}
-        return decodeURIComponent(cookiePair[1]);
-      }
-  }
-  return null;
-}
-function CookieInit(){
-
-    // -------------- Eléments de "Sécurité"
-    // path =/                      pour rendre le cookie accessible à partir de toutes les pages du site Web
-    // domain=pierre-giraud.com     mon cookie sera disponible sur le domaine et sur l’ensemble des sous domaines liés
-    // samesite="strict"            indique qu’un cookie ne doit jamais être envoyé si l’utilisateur arrive sur le site depuis un autre site 
-    // max-age=3600                 pour définir la date d’expiration d’un cookie en secondes à partir du moment actuel
-
-    // -------------- Eléments de code
-    // UserName     Pour personnaliser les exemples
-    // Email        Pour personnaliser les exemples
-
-    // Verif if cookie exist
-    if(debug>1){log(" -> Cookie check ("+document.cookie+")");}
-    let Loc_User = getCookie("UserName");
-    let Loc_Email = getCookie("Email");
-
-    if (Loc_User != "" && Loc_User != null && Loc_Email != "" && Loc_Email != null) {
-      if(debug>2){log(" - - > Known user: "+User);}
-      SetHTML("UserName",Loc_User);
-      SetHTML("Email",Loc_Email);
-      User = Loc_User;
-      Email = Loc_Email;
-      return true;
-    }else {
-      if(debug>2){log(" - - > Unknown user asking");}
-      Personalize();    
-    }
-    return true;
-}
-
 function decodeBase64(s) {
   var e={},i,b=0,c,x,l=0,a,r='',w=String.fromCharCode,L=s.length;
   var A="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -117,16 +71,16 @@ function Personalize(){
   SetDisplay("error",		    "none");
 
   if(debug>0){log(" - - > Asking User Name");}
-  User = prompt("Veuillez entrer NOM Prenom:", User);
+  User = prompt("Veuillez entrer NOM Prenom:\n(Cette donnée reste dans votre navigateur)", User);
   // user = "Han ONYME"
 
   if(debug>0){log(" - - > Asking Email");}
-  Email = prompt("Veuillez entrer votre email:", Email);
+  Email = prompt("Veuillez entrer votre email:\n(Cette donnée reste dans votre navigateur)", Email);
   // email = "han@onyme.fr"
   if ((User != "" && User != null) && (Email != "" && Email != null)){
     if((User.length>3) && (Email.length>4) && Email.includes("@")){
-      document.cookie = "UserName=" + User + CookieSecur;
-      document.cookie = "Email=" + Email + CookieSecur;
+      // document.cookie = "UserName=" + User + CookieSecur;
+      // document.cookie = "Email=" + Email + CookieSecur;
       SetHTML("UserName",User);
       SetHTML("Email",Email);
     }else{
@@ -187,8 +141,10 @@ function ShowHeaders(){
 
 }
 function Reset(){
-  document.cookie = "Success=0"+ CookieSecur;
-  document.cookie = "Pending=0"+ CookieSecur;
+  // document.cookie = "Success=0"+ CookieSecur;
+  // document.cookie = "Pending=0"+ CookieSecur;
+  Success = 0;
+  Pending = 0;
   location.reload();
 }
 /* Fonction Réponse */
@@ -449,14 +405,16 @@ function Finished(){
   if(debug>1){log("Showing result text");}
   var millis = Date.now() - starttime;
   let chronometre = Math.floor((millis-explanation_time) / 1000);
-  SetHTML("Result","Le jeux/test est fini cher "+User+"<br>Vous avez "+(parseInt(Success))+"/"+(parseInt(Total))+" en "+chronometre+" secondes.<br>"+comment);
+  SetHTML("Result","Le jeux/test est fini cher(e) "+User+"<br>Vous avez "+(parseInt(Success))+"/"+(parseInt(Total))+" en "+chronometre+" secondes.<br>"+comment);
 }
 
 /* Main idea */
 function main(){
   /* Full Run */
   log("Starting (debug = "+debug+")");
-  CookieInit();
+  // CookieInit();
+  SetHTML("UserName",User);
+  SetHTML("Email",Email);
   AddListener();
   SetDisplay("Termination",        "none");
   SetDisplay("Sample_Headers",     "none");
