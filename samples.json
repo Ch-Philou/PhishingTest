@@ -1,6 +1,6 @@
 [
     {
-        "Sender":"<font color='green' title='un nom de collegue avec qui vous echangez'>[un_nom_de_collegue]</font>@yahoo.fr",
+        "Sender":"<font color='green' title='un nom de coll&egrave;gue avec qui vous echangez'>[un_nom_de_coll&egrave;gue]</font>@yahoo.fr",
         "Destination":"#email#",
         "CC":"",
         "Object":"Nouvelles",
@@ -8,8 +8,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"Ceci est un arnaque classique, l'email de l'expediteur est proche du vrai email de votre collegue<br>pour faire croire à une erreur de boite mail. Mais ca va se finir en mandat cash.",
-        "AnswerGood":"Ceci est un arnaque classique, l'email de l'expediteur est proche du vrai email de votre collegue<br>pour faire croire à une erreur de boite mail. Ca va se finir en mandat cash.",
+        "AnswerBad":"Ceci est une arnaque classique, l'adresse email de l'exp&eacute;diteur est proche de la vraie adresse email professionnelle/personnelle de votre coll&egrave;gue<br>pour faire croire à une erreur de boite mail. Mais ca va se finir en extorsion par mandat cash.",
+        "AnswerGood":"Ceci est une arnaque classique, l'adresse email de l'exp&eacute;diteur est proche de la vraie adresse email professionnelle/personnelle de votre coll&egrave;gue<br>pour faire croire à une erreur de boite mail. Ca va se finir en extorsion par mandat cash.",
         "Level":"Faible",
         "Style":"outlook"
     },
@@ -22,8 +22,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"On parle de smishing pour les phishing SMS. On vois bien les I pour remplacer les petit L, c'est du typposquatting.",
-        "AnswerGood":"On parle de smishing pour les phishing SMS. On les I sont là pour remplacer les petits L, c'est du typposquatting.",
+        "AnswerBad":"On parle de smishing pour les phishings SMS. On vois bien les grands i pour remplacer les petit L, c'est du typposquatting.",
+        "AnswerGood":"On parle de smishing pour les phishings SMS. Des grands i sont là pour remplacer les petits L, c'est du typposquatting.",
         "Level":"Moyen",
         "Style":"android"
     },
@@ -36,8 +36,8 @@
         "Headers": "Delivered-To: #email#<br>Received: by 2002:ab0:7195:0:b0:2b3:2b1e:7182 with SMTP id l21csp82272uao;<br>&emsp;Wed, 8 Sep 2021 11:55:48 -0700 (PDT)<br>X-Google-Smtp-Source: ABdhPJyf2LtQ2WEnoW6J924Sq7v5bK9j7DzurWbg5CpF7lTtkZUYdPNnC0g/qMTAe8AJ4GO6ALWm<br>X-Received: by 2002:a05:6512:c24:: with SMTP id z36mr3749628lfu.335.1631127347826;<br>&emsp;Wed, 08 Sep 2021 11:55:47 -0700 (PDT)<br>ARC-Seal: i=1; a=rsa-sha256; t=1631127347; cv=none;<br>&emsp;d=google.com; s=arc-20160816;<br>&emsp;b=l026hpM68eHEI5U93h0il/gX/Hon8+k8URpUqj+0PlRRNsBpAGwSADTw8UwAOwgQYr<br>&emsp; sXIUcv+f3ecVKF5CEkVPK5npuv70vmYr3SjpoTZPRik5xgMRC93nghWeIsEsCbnRlcjn<br>&emsp; jFVsBH8GBvO8YZBlj11Of0EMson+fPbUS5ilvErmoFfeisphaHnieqoLNIiMObTBmCHI<br>&emsp; gjyost0Wa2pmfO95Nbb2vCssHsuJxopmBNwYYYNNHVJ0WXI3+gROJYLn6H7z+tk5gfdA<br>&emsp; qQUv9StI1yW70WvOAgI3aXy0ZPQX1jbEaKh/e0hEshEsR2VqBWRZqtIuhmOBLHp5ulHT<br>&emsp; q8MA==<br>ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;<br>&emsp;h=content-transfer-encoding:mime-version:subject:to:from:date<br>&emsp; :message-id;<br>&emsp;bh=H1EpC/aFUkfwU9pDR6+C9sxsExqk5qxsmdXGxuhpBJk=;<br>&emsp;b=rpTDUP24DuwlWumeI8wwHa6Enb28QdJiuhQBFUvdgIia0H2FFB1Tj+hMSYNylw6eVp<br>&emsp; NJDTWJPMLcAGhGDJ0gID1MrTxt+RpGdyF8lLtvZZ/aFxiu02lAV/KF2Fs8lDHd+1I9Yr<br>&emsp; SULgH9sUno/tgEB3ayhxq0OT+LvtupNHoTL22jkU+gF53WajJgCIba+AZrhDxA9IZ+WJ<br>&emsp; fII9xas3ITrqUbUl84PleLDkFI3h03vleIOYCtEJlf7NyF0Kf0Q2Q6FXopOjy4MukF0+<br>&emsp; ReK5atQoz0PvjckcZD+hpHWYA8cuSrbZqh9EoqEQb6hNNj3AdXH5Uo8sMLUvf9BiuP17<br>&emsp; ZU/g==<br>ARC-Authentication-Results: i=1; mx.google.com;<br>       spf=softfail (google.com: domain of transitioning davidson@elevatemarketingpk.com does not designate 152.89.46.2 as permitted sender) smtp.mailfrom=Davidson@elevatemarketingpk.com<br>Return-Path: <Davidson@elevatemarketingpk.com><br>Received: from Davidson.elevatemarketingpk.com ([152.89.46.2])<br>&emsp;by mx.google.com with SMTP id n22si3528976ljc.191.2021.09.08.11.55.46<br>&emsp;for #email#;<br>&emsp;Wed, 08 Sep 2021 11:55:47 -0700 (PDT)<br>Received-SPF: softfail (google.com: domain of transitioning davidson@elevatemarketingpk.com does not designate 152.89.46.2 as permitted sender) client-ip=152.89.46.2;<br>Authentication-Results: mx.google.com;<br>       spf=softfail (google.com: domain of transitioning davidson@elevatemarketingpk.com does not designate 152.89.46.2 as permitted sender) smtp.mailfrom=Davidson@elevatemarketingpk.com<br>Message-ID: <61390733.1c69fb81.db1bb.1adeSMTPIN_ADDED_MISSING@mx.google.com><br>Date: 8 Sep 2021 23:25:56<br>From: Michael Campbell <Davidson@elevatemarketingpk.com><br>To: #email#<br>Subject: <font color='green' title='un mot de passe que vous avez utilisé un jour'>[un vieux mot de passe]</font><br>MIME-Version: 1.0<br>Content-Type: text/html; charset='UTF-8'<br>Content-Transfer-Encoding: 7bit",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"c'est une bouteille à la mer, il a récupéré une liste public de login mot de passe.<br> Et essaye de vous faire chanter. Mais il ne vous a jamais piraté.",
-        "AnswerGood":"Ceci est un arnaque classique du moment, il a récupéré une liste public de login mot de passe.<br> Et essaye de vous faire chanter. Mais il ne vous a jamais piraté.",
+        "AnswerBad":"c'est une bouteille à la mer, il a récupéré une liste publique de logins/mots de passe.<br> Et essaie de vous faire chanter. Mais vous n'avez pas été piraté (dumoins par lui).",
+        "AnswerGood":"Ceci est un arnaque classique du moment, il a récupéré une liste publique de logins/mots de passe.<br> Et essaie de vous faire chanter. Mais vous n'avez pas été piraté (dumoins par lui).",
         "Level":"Moyen",
         "Style":"outlook"
     },
@@ -50,8 +50,8 @@
         "Headers":"Delivered-To: #email#<br>Received: by 2002:ab0:6243:0:0:0:0:0 with SMTP id p3csp94511uao;<br>&emsp;Sun, 18 Oct 2020 23:01:28 -0700 (PDT)<br>X-Google-Smtp-Source: ABdhPJw27iAYpeBUxEri2T9wegK323Uu3j4/lXhK3EFvJzenp12j8C0N2B7D/hAeRK90lm8WHmBr<br>X-Received: by 2002:adf:e3cb:: with SMTP id k11mr17946548wrm.341.1603087288302;<br>&emsp;Sun, 18 Oct 2020 23:01:28 -0700 (PDT)<br>ARC-Seal: i=1; a=rsa-sha256; t=1603087288; cv=none;<br>&emsp;d=google.com; s=arc-20160816;<br>&emsp;b=CqMi07q2nj9n9neWgkhUqe3NjT6baS7OPP/s3xihXZDZKpvQ9UKTnkhd6uV6z2hzOT<br>&emsp; SusMNxkDEzSsgfO+5DfxJaaBKFNJZERxwZ1LIui5d83GXf17S4N2x5WIyR/tuo7DLfRl<br>&emsp; A0fcehIDsghSKYdjNN05XoilDFfz2aVIkud0GOqAK05mgqU+rg8XOomOx5EYNZ3+PBRm<br>&emsp; chJJGPggR6jQu5yoOfs5cgf/OKV/e9588oLDiirE+Lkj+lN601C087K/790t4wN13NG4<br>&emsp; sBh8c2662OjXLxLcGoh4cIGtbocMGHJoKYBrQY/a87BtkcsH9WgS1sZbkmgcg4dmQ6i+<br>&emsp; oZiQ==<br>ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;<br>&emsp;h=mime-version:subject:to:from:date:message-id;<br>&emsp;bh=6kJ0GSLgb4VHiogHm92ioeiyecIvnqxsDqYdH3ujlrI=;<br>&emsp;b=I3jjztbcfeHFGt0GYAI57ZIZsJeW++C6r04AqGgb2pAK6PmpCJ5M4BcfdN9kyL1Pfv<br>&emsp; 5tXkV6zBhnBrYOPoC6rQ4u3H1hrmziq0f/AHzLQcJsywp/H4z2J6SBeEKscE1hQV2D5a<br>&emsp; hrDiBE8Zx9qMw96/2HKKzymJVbSOU/mmLbkldVtTnR86QLNk14F2Q8xaRYdd7akfkyZT<br>&emsp; pdoiyuyd7kCdh1VPfyfoLzoQ2GEVIlfEV1ApiBq2Lyld5OGs2hmOa7MXnmtwW10/pjnI<br>&emsp; FG9Fb+ixAW7ZYDQGV/+xdpuqe1khziMRIAGLTY7CNk2OM3qWs39jEqQxI+aIxhLg6gmj<br>&emsp; yUBA==<br>ARC-Authentication-Results: i=1; mx.google.com;<br>&emsp;spf=pass (google.com: best guess record for domain of #email# designates 193.252.22.91 as permitted sender) smtp.mailfrom=#email#<br>Return-Path: <#email#><br>Received: from out.smtpout.#domain# (out07.smtpout.#domain#. [193.252.22.91])<br>&emsp;by mx.google.com with ESMTPS id i15si10718562wml.45.2020.10.18.23.01.28<br>&emsp;for #email#<br>&emsp;(version=TLS1 cipher=AES128-SHA bits=128/128);<br>&emsp;Sun, 18 Oct 2020 23:01:28 -0700 (PDT)<br>Received-SPF: pass (google.com: best guess record for domain of #email# designates 193.252.22.91 as permitted sender) client-ip=193.252.22.91;<br>Authentication-Results: mx.google.com;<br>&emsp;spf=pass (google.com: best guess record for domain of #email# designates 193.252.22.91 as permitted sender) smtp.mailfrom=#email#<br>Received: from opme11dob69aub.bagnolet.francetelecom.fr ([10.110.83.18])<br>&emsp;by mwinf5d67 with ME<br>&emsp;id hi1T2300M0PjQsS03i1Tak; Mon, 19 Oct 2020 08:01:28 +0200<br>X-ME-Helo: opme11dob69aub.bagnolet.francetelecom.fr<br>X-ME-Date: Mon, 19 Oct 2020 08:01:28 +0200<br>X-ME-IP: 10.110.83.18<br>X-Sieve: Pigeonhole Sieve 0.4.24.2 (9471f26d)<br>X-Sieve-Redirected-From: #email#<br>Received: from opme11dod03aub.bagnolet.francetelecom.fr ([10.79.3.106])<br>&emsp;by opme11dob69aub.bagnolet.francetelecom.fr with LMTP id +MgrLLcrjV9hYwAA8J7cWg<br>&emsp;; Mon, 19 Oct 2020 08:01:27 +0200<br>Received: from opme11ppr09aub.bagnolet.francetelecom.fr ([10.79.3.106])<br>&emsp;by opme11dod03aub.bagnolet.francetelecom.fr with LMTP id 8NcGLLcrjV8VEQAAISZfgQ<br>&emsp;; Mon, 19 Oct 2020 08:01:27 +0200<br>Received: from mwinf5c54 ([10.79.3.106])<br>&emsp;by opme11ppr09aub.bagnolet.francetelecom.fr with LMTP id WN1mNrUrjV/3FAAAGekjWw<br>&emsp;; Mon, 19 Oct 2020 08:01:27 +0200<br>Received: from porter.com ([176.122.27.79])<br>&emsp;by mwinf5c54 with ME<br>&emsp;id hi1T2300V1iQSvk01i1TSi; Mon, 19 Oct 2020 08:01:27 +0200<br>X-bcc: #email#<br>X-ME-engine: default<br>X-me-spamcause: (0)(0000)gggruggvucftvghtrhhoucdtuddrgedujedrj<br>X-me-spamlevel: not-spam<br>Message-ID: <8d0cf1c881348326795cf92ab2da765b@mwinf5c54.me-wanadoo.net><br>Date: Mon, 19 Oct 2020 05:41:56 +0200<br>From:'Support' <email@ml.orangftsrvc.com><br>To: <#email#><br>Subject:=?UTF-8?B?UmU6IFJhcHBlbCBBbGJlcnQgQmVzc29u8J+OgQ==?=<br>MIME-Version: 1.0",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"Le lien ne pointe pas du tout vers orange mais <i>insight.adsrvr.org</i>,<br>et l'expediteur n'est pas orange <i>@ml.orangftsrvc.com</i>...",
-        "AnswerGood":"En effet, le lien ne pointe pas du tout vers orange mais <i>insight.adsrvr.org</i>,<br>et l'expediteur n'est pas orange mais <i>@ml.orangftsrvc.com</i>.",
+        "AnswerBad":"Le lien ne pointe pas du tout vers Orange mais <i>insight.adsrvr.org</i>,<br>et l'expediteur n'est pas Orange <i>@ml.orangftsrvc.com</i>...",
+        "AnswerGood":"En effet, le lien ne pointe pas du tout vers Orange mais <i>insight.adsrvr.org</i>,<br>et l'expediteur n'est pas Orange mais <i>@ml.orangftsrvc.com</i>.",
         "Level":"Faible",
         "Style":"outlook"
     },
@@ -64,8 +64,8 @@
         "Headers":"Delivered-To: #email#<br>Received: by 2002:a05:6504:15d0:b0:1e7:d62b:de4b with SMTP id c16csp179685ltq;<br>&emsp; Wed, 5 Oct 2022 19:39:16 -0700 (PDT)<br>X-Google-Smtp-Source: AMsMyM7LAR5Uad4ldCQmlMu2gjdhWNe2gGUrG/5ntD13A1O8r824lcvFcoE2fFQ9elIEglSh6OkH<br>X-Received: by 2002:a5d:51d1:0:b0:22e:4701:fc5d with SMTP id n17-20020a5d51d1000000b0022e4701fc5dmr1472890wrv.515.1665023956175;<br>&emsp; Wed, 05 Oct 2022 19:39:16 -0700 (PDT)<br>ARC-Seal: i=1; a=rsa-sha256; t=1665023956; cv=none;<br>&emsp; d=#domain#; s=arc-20160816;<br>&emsp; b=ti0pq+PQ8jtpR/zOlfVZYXLWip+VanM2LiSpdv1rbbtVB+F84z/XjfdwgNmkCz+OF9<br>&emsp;  ZBr1FYva25hoOzOseObxBJEnQ15VhvCmvUT4JNidSNm3y3NKpjO2l9XyF7PP+gFPw/4v<br>&emsp;  OXzEqQgY+9IbRt4bPp+CqTjHoTXQgtPvHOnUjPNT8yzJqMCV7rAPNoRJj1c1GAax9vV2<br>&emsp;  R29GZRMAaLcidorsXChLCz8ijKghS5rR/MPZI0WiNiSN1W+QDc2xeVavXDMk5MEcfFWb<br>&emsp;  U+LBOLkUeXaw2IYF3oj/cEPM9SQe/FyIu4jGExCI+Oo6ujRyIlYCwTwOZp1jyS5jP8bK<br>&emsp;  pFhg==<br>ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=#domain#; s=arc-20160816;<br>&emsp; h=subject:to:from:date:mime-version:content-transfer-encoding<br>&emsp;  :content-disposition:dkim-signature:message-id;<br>&emsp; bh=52D2Fw4hCbfxqTtBQ+uT0fj3UXafEN5Am2jrsucOApU=;<br>&emsp; b=wU5KoLLoEKl8V8z05MuUkZpDf6s8EimUGPOU1PoblE+NYnkVIiAcOMW2ZjhHa+gem3<br>&emsp;  +1Vyy0eHZkJiKmDcPM096u6WINJajD7NMVgWiRZs9AhypHJJvWDPZ1m9meHWmSuwfP6n<br>&emsp;  Vorwbn7kracoQIKN8NMrEBLamD+fkts/gdN3VAFgiNxulVwa1VBa+40QPk4bpsbCqsEA<br>&emsp;  tICASufEh1YIeSOykh5eoin9rKM8otzGS95PNmNiZzLUhIgf38vo+/n++wC4de1fTIh9<br>&emsp;  +/b2m7j5bVWK94gDhfb62OYifB/HPzFWYCh5GF4RUfY6Ytq2PyQDnVVgQLkA6BNtQ+cl<br>&emsp;  6Q2Q==<br>ARC-Authentication-Results: i=1; mx.#domain#;<br>&emsp;dkim=pass header.i=@freetelecom.fr header.s=mail header.b=XQnpqClG;<br>&emsp;spf=neutral (#domain#: 212.27.42.4 is neither permitted nor denied by best guess record for domain of bjpmywn0mjaymjewfgu6ywriymn8atoyndu3ntq0na==_2276c@bounces.freetelecom.fr) smtp.mailfrom='bjpmYWN0MjAyMjEwfGU6YWRiYmN8aToyNDU3NTQ0NA==_2276c@bounces.freetelecom.fr'<br>Return-Path: <bjpmYWN0MjAyMjEwfGU6YWRiYmN8aToyNDU3NTQ0NA==_2276c@bounces.freetelecom.fr><br>Received: from smtp4-g21.free.fr (smtp4-g21.free.fr. [212.27.42.4])<br>&emsp; by mx.#domain# with ESMTPS id 10-20020a056000156a00b0022cdff9b9f7si10092992wrz.741.2022.10.05.19.39.15<br>&emsp; for <#email#><br>&emsp; (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);<br>&emsp; Wed, 05 Oct 2022 19:39:16 -0700 (PDT)<br>Received-SPF: neutral (#domain#: 212.27.42.4 is neither permitted nor denied by best guess record for domain of bjpmywn0mjaymjewfgu6ywriymn8atoyndu3ntq0na==_2276c@bounces.freetelecom.fr) client-ip=212.27.42.4;<br>Authentication-Results: mx.#domain#;<br>&emsp;dkim=pass header.i=@freetelecom.fr header.s=mail header.b=XQnpqClG;<br>&emsp;spf=neutral (#domain#: 212.27.42.4 is neither permitted nor denied by best guess record for domain of bjpmywn0mjaymjewfgu6ywriymn8atoyndu3ntq0na==_2276c@bounces.freetelecom.fr) smtp.mailfrom='bjpmYWN0MjAyMjEwfGU6YWRiYmN8aToyNDU3NTQ0NA==_2276c@bounces.freetelecom.fr'<br>Message-ID: <633e3fd4.050a0220.8be3d.fe51SMTPIN_ADDED_MISSING@mx.#domain#><br>Received: from smtpfs1-g21.free.fr (unknown [212.27.42.28])<br>&emsp;by smtp4-g21.free.fr (Postfix) with ESMTP id D078419F5A7<br>&emsp;for <#email#>; Thu,  6 Oct 2022 04:39:15 +0200 (CEST)<br>Received: from localhost.localdomain (unknown [172.20.241.176])<br>&emsp;by smtpfs1-g21.free.fr (Postfix) with ESMTP id CCD6E10604DA<br>&emsp;for <#email#>; Thu,  6 Oct 2022 04:39:15 +0200 (CEST)<br>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=freetelecom.fr;<br>&emsp;s=mail; t=1665023955;<br>&emsp;bh=52D2Fw4hCbfxqTtBQ+uT0fj3UXafEN5Am2jrsucOApU=;<br>&emsp;h=Date:From:To:Subject:From;<br>&emsp;b=XQnpqClGBysQD0nyxpTPVwYHx4VBHLPwB/+jA2+N1tbTx9fLqdUOjZwEeKHz0Fxlh<br>&emsp; qXV8K9hVtUuJ3jksGxkeqZDstjtEPTPuoKUhdAC0zc7PUdqVC5TB47kbBVMIr/YCSZ<br>&emsp; cK7eODARmSEL3btJU7I0NjkzB106rd7dF8+bNQs+v++LesMQVtuX+pU+gPUYX9ItUa<br>&emsp; u2DkWOevg2SADA6tWen+D4fLM2LbmsnSsF6qfYygBA7y+ORYA2Xd6lTyA78U1WpLJG<br>&emsp; ezwyr7dJAEHDlfJAfh16mnKQ/t9XySoA5qTpxJqZefzDotNb/BT5foOP00lRhCGrFh<br>&emsp; 1xl0zHd7D9x0w==<br>Content-Disposition: inline<br>Content-Transfer-Encoding: base64<br>Content-Type: text/html; charset='UTF-8'<br>MIME-Version: 1.0<br>X-Mailer: MIME::Lite 3.030 (F2.85; T2.17; A2.18; B3.15; Q3.13)<br>Date: Thu, 6 Oct 2022 04:39:15 +0200<br>From: Free <hautdebit@freetelecom.fr><br>To: #email#<br>Subject: Votre facture Freebox est disponible<br>X-Id_client: 11111111",
         "Attachements":"",
         "Phishing":false,
-        "AnswerBad":"tout les liens pointent vers des domaines free, pas de pieces jointe, pas de lien louche.<br> Légitime",
-        "AnswerGood":"tout les liens pointent vers des domaines free, pas de pieces jointe, pas de lien louche.<br> Légitime",
+        "AnswerBad":"Tous les liens pointent vers des domaines Free, pas de pieces jointe, pas de lien suspect.<br> Email légitime",
+        "AnswerGood":"Tous les liens pointent vers des domaines Free, pas de pieces jointe, pas de lien suspect.<br> Email légitime",
         "Level":"Moyen",
         "Style":"outlook"
     },
@@ -107,7 +107,7 @@
         "Attachements":"<img src='./img/zip.png' width='64'/>Facture_1546367843.zip",
         "Phishing":true,
         "AnswerBad":"les factures ne sont jamais en zip.<br>Il manque l'historique du <i>Re: RE:</i>.<br>Et le numéro de facture en titre, n'as rien à voir avec celui dans le corps.",
-        "AnswerGood":"une factures en .zip c'est en effet assez louche.<br>Il manque l'historique du <i>Re: RE:</i>.<br>Et le numéro de facture en titre, n'as rien à voir avec celui dans le corps.",
+        "AnswerGood":"une facture en .zip c'est en effet assez louche.<br>Il manque l'historique du <i>Re: RE:</i>.<br>Et le numéro de facture en titre, n'as rien à voir avec celui dans le corps.",
         "Level":"Moyen",
         "Style":"outlook"
     },
@@ -120,8 +120,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"<i>Mailling-Manage.com</i> est un gestionnaire de newsletter plutot... pas chère. Et qui envois plutôt du phishing au final.<br>Ca va se finir avec des fausses alertes Antivirus (un <a target='techscamsupport' href='https://wiki-arnaque.fandom.com/fr/wiki/Faux_supports_techniques'>tech scam support</a>).",
-        "AnswerGood":"<i>Mailling-Manage.com</i> est un gestionnaire de newsletter plutot... pas chère. Et qui envois plutôt du phishing.<br>Ca va se finir avec des fausses alertes Antivirus (un <a  target='techscamsupport' href='https://wiki-arnaque.fandom.com/fr/wiki/Faux_supports_techniques'>tech scam support</a>).",
+        "AnswerBad":"<i>Mailling-Manage.com</i> est un gestionnaire de newsletter plut&ocirc;t... bon marché, et souvent utilisé pour des campagnes de phishing. Faites attention.<br>Ca va se finir avec des fausses alertes Antivirus (un <a target='techscamsupport' href='https://wiki-arnaque.fandom.com/fr/wiki/Faux_supports_techniques'>tech scam support</a>).",
+        "AnswerGood":"<i>Mailling-Manage.com</i> est un gestionnaire de newsletter plut&ocirc;t... bon marché, et souvent utilisé pour des campagnes de phishing. Faites attention.<br>Ca va se finir avec des fausses alertes Antivirus (un <a  target='techscamsupport' href='https://wiki-arnaque.fandom.com/fr/wiki/Faux_supports_techniques'>tech scam support</a>).",
         "Level":"Moyen",
         "Style":"outlook"
     },
@@ -134,8 +134,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"<i>edf-etude.fr</i> est un site qui n'existe pas. L'adresse n'est pas celle d'eDF mais d'eDF Renouvelable (c'est pas loing mais pas eux).<br>Ce n'est pas signature des communications eDF. Pas de référence client.<br> En plus ils appellent pour combler l'arnaque.",
-        "AnswerGood":"<i>edf-etude.fr</i> est un site qui n'existe pas. L'adresse n'est pas celle d'eDF mais d'eDF Renouvelable (c'est pas les loing mais pas eux).<br>Ce n'est pas signature des communications eDF. Pas de référence client.<br> En plus ils appellent pour combler l'arnaque",
+        "AnswerBad":"<i>edf-etude.fr</i> est un site qui n'existe pas. L'adresse n'est pas celle d'eDF mais d'eDF Renouvelable (c'est pas loin mais pas eux).<br>Ce n'est pas la signature des communications eDF. Pas de référence client.<br> En plus ils appellent pour combler l'arnaque.",
+        "AnswerGood":"<i>edf-etude.fr</i> est un site qui n'existe pas. L'adresse n'est pas celle d'eDF mais d'eDF Renouvelable (c'est pas les loin mais pas eux).<br>Ce n'est pas la signature des communications eDF. Pas de référence client.<br> En plus ils appellent pour combler l'arnaque",
         "Level":"Haut",
         "Style":"outlook"
     },
@@ -148,8 +148,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"<i>cpfrance.typeform.com</i> ne fait pas très gouvernementale.",
-        "AnswerGood":"<i>cpfrance.typeform.com</i> ne fait pas très gouvernementale.",
+        "AnswerBad":"<i>cpfrance.typeform.com</i> ne ressemble pas à un domaine pouvant être utilisé par le gouvernement français, dans la plupart des cas cela fini par *.gouv.fr.",
+        "AnswerGood":"<i>cpfrance.typeform.com</i> ne fait pas très gouvernement français en effet.",
         "Level":"Moyen",
         "Style":"android"
     },
@@ -162,8 +162,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"<i>bit.ly</i> est un raccourcisseur d'URL, c'est deja un peu etrange, car ce n'est pas celui de Paypal. Mais c'est surtout la demande et n'expéditeur qui sont louche.",
-        "AnswerGood":"L'expéditeur n'est pas un numéro cours, et la demande est louche. Mais <i>bit.ly</i> n'est pas un raccourcisseur d'URL 'porpre'",
+        "AnswerBad":"<i>bit.ly</i> est un raccourcisseur d'URL, c'est deja un peu étrange, car ce n'est pas celui de Paypal. Mais c'est surtout la demande et n'expéditeur qui sont louche.",
+        "AnswerGood":"L'expéditeur n'est pas un numéro cours, et la demande est louche. Mais <i>bit.ly</i> n'est pas un raccourcisseur d'URL 'propre'",
         "Level":"Haut",
         "Style":"android"
     },
@@ -176,8 +176,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":false,
-        "AnswerBad":"Envoyé d'un numéro cours, pas de lien. Si vous n'avez rien demandé, ignoré le sms. Si vous n'avez pas de compte Yahoo, quelqu'un a mis un mauvais numéro",
-        "AnswerGood":"Envoyé d'un numéro cours, pas de lien. Si vous n'avez rien demandé, ignoré le sms. Si vous n'avez pas de compte Yahoo, quelqu'un a mis un mauvais numéro",
+        "AnswerBad":"Envoyé d'un numéro court, pas de lien. Si vous n'avez rien demandé, ignorez le sms. Si vous n'avez pas de compte Yahoo, quelqu'un a mis un mauvais numéro",
+        "AnswerGood":"Envoyé d'un numéro court, pas de lien. Si vous n'avez rien demandé, ignorez le sms. Si vous n'avez pas de compte Yahoo, quelqu'un a mis un mauvais numéro",
         "Level":"Haut",
         "Style":"android"
     },
@@ -190,8 +190,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":false,
-        "AnswerBad":"Envoyé d'un numéro cours, un lien mais c'est le raccourcisseur d'amazon. Si vous n'avez rien commandé chez Amazon, ignoré le sms. Si vous n'avez pas de compte Amazon, quelqu'un a mis un mauvais numéro",
-        "AnswerGood":"Envoyé d'un numéro cours, un lien mais c'est le raccourcisseur d'amazon. Si vous n'avez rien commandé chez Amazon, ignoré le sms. Si vous n'avez pas de compte Amazon, quelqu'un a mis un mauvais numéro",
+        "AnswerBad":"Envoyé d'un numéro court, un lien mais c'est le raccourcisseur d'Amazon. Si vous n'avez rien commandé chez Amazon, ignorez le sms. Si vous n'avez pas de compte Amazon, quelqu'un a mis un mauvais numéro",
+        "AnswerGood":"Envoyé d'un numéro court, un lien mais c'est le raccourcisseur d'Amazon. Si vous n'avez rien commandé chez Amazon, ignorez le sms. Si vous n'avez pas de compte Amazon, quelqu'un a mis un mauvais numéro",
         "Level":"Haut",
         "Style":"android"
     },
@@ -204,8 +204,8 @@
         "Headers":"",
         "Attachements":"",
         "Phishing":true,
-        "AnswerBad":"Envoyé d'un numéro 06, un lien sans .gouv, un numéro en 09... Et isncription limitées pour un service de l'état? Clairement, une arnaque",
-        "AnswerGood":"Un numéro 06, un lien sans .gouv, un numéro en 09. Une arnaque",
+        "AnswerBad":"Envoyé d'un numéro 06, un lien sans .gouv, un numéro en 09... Et 'isncriptions limitées' pour un service de l'état? Clairement, une arnaque",
+        "AnswerGood":"Un numéro 06, un lien sans .gouv, un numéro en 09. Bien vue, c'est une arnaque",
         "Level":"Haut",
         "Style":"android"
     }

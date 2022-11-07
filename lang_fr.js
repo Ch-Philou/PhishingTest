@@ -19,13 +19,13 @@ var messages = {
     // Section Response
     Response_Catpion : "Ceci est il un phishing?",
     Response_Btn_Yes : "Oui, phishing",
-    Response_Btn_No : "Non, pas phishing",
+    Response_Btn_No : "Non, légitime",
 
     // Section Termination
-    TerminationText : "Nous esp&eacute;rons que cela vous a aid&eacute; &agrave; affut&eacute; votre cybervigilance.<br>Rappel des actions &agrave; faire:<ul><li>Regarder l'exp&eacute;diteur r&eacute;el</li><li>Regarder les liens (survoler sans cliquer)</li><li>Regarder le format des pi&egrave;cesjointes (pdf, xls, doc, exe...)</li><li>La coh&eacute;rence des inforamtions (titre, texte, exp&eacute;diteur...)</li></ul>Plus globalement:<ul><li>R&eacute;fl&eacute;chir avant de cliquer, votre carte bleue vaut bien 30s</li><li>SMS Louche: transf&eacute;r&eacute; le au 33700 (service gratuit)</li><li>Inscrire tous vos emails sur <a href='https://haveibeenpwned.com'>HaveIBeenPwned</a></li><li>Un mot de passe par site, et <a href='https://keepass.info/'>Keepass</a> pour les rassembler tous</li></ul>",
+    TerminationText : "Nous esp&eacute;rons que cela vous a aid&eacute; &agrave; affuter votre cybervigilance.<br>Rappel des actions &agrave; faire:<ul><li>Regarder l'exp&eacute;diteur r&eacute;el</li><li>Regarder les liens (survoler sans cliquer)</li><li>Regarder le format des pi&egrave;ces jointes (pdf, xls, doc, exe...)</li><li>La coh&eacute;rence des informations (titre, texte, exp&eacute;diteur...)</li></ul>Plus globalement:<ul><li>R&eacute;fl&eacute;chir avant de cliquer, votre carte bleue vaut bien 30s</li><li>SMS Louche: transf&eacute;rez le au 33700 (service gratuit)</li><li>Inscrire tous vos emails sur <a href='https://haveibeenpwned.com'>HaveIBeenPwned</a></li><li>Un mot de passe par site, et <a href='https://keepass.info/'>Keepass</a> pour les rassembler tous</li></ul>",
 
     // Section Footer
-    Footer: "Jeux sans obligation d'achat. Le but est de vous entrainer &agrave; ne plus être phish&eacute;.<br>Ce jeux est 100% dans votre navigateur, nous n'avons pas les &eacute;l&eacute;ments que vous renseignez",
+    Footer: "Jeux sans obligation d'achat. Le but est de vous entrainer &agrave; ne plus &ecirc;tre phish&eacute;.<br>Ce jeu est 100% dans votre navigateur,totalement anonyme, nous n'avons pas les &eacute;l&eacute;ments que vous renseignez",
     // Section logger
     // Section error
 
