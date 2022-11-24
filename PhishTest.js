@@ -69,7 +69,7 @@ function sleep(ms) {
 }
 
 function Personalize(){
-  SetDisplay("Explanation",	"none");
+  // SetDisplay("Explanation",	"none");
   // SetDisplay("Loading",		  "none");
   // SetDisplay("Sample_eMail","block");
   // SetDisplay("Sample_SMS",	"block");
@@ -160,6 +160,7 @@ function Reset(){
 }
 /* Fonction Réponse */
 function Answer(Choice){
+  if(debug>8){log("        Func Start - Answer")};
   if(debug>1){log("Answer("+Choice+")");}
   SetDisplay("Sample_eMail",  "none");
   SetDisplay("Sample_SMS",    "none");
@@ -193,9 +194,11 @@ function Answer(Choice){
     Pending = Pending +1;
     // document.cookie = "Pending=" + Pending + CookieSecur;
   }
+  if(debug>8){log("        Func End - Answer")};
 }
 
 function NextSample(){
+  if(debug>8){log("        Func Start - NextSample")};
   IsExplaining = false;
   // var Pending = parseInt(getCookie("Pending"));
   SetDisplay("Loading","table");// car c'est un table
@@ -262,13 +265,36 @@ function Load_To_Table(OneSample){
     }else{
       HTML_Body_Content += replaceTAG(Base64.decode(OneSample.Body));
     }
+    // Test quoted
+    // if(HTML_Body_Content.includes("=C3=A9")){HTML_Body_Content = decodeURI(HTML_Body_Content.replace(/={1}/g, '%'));}
+    if(HTML_Body_Content.includes("=C3=A9")){HTML_Body_Content = HTML_Body_Content.replaceAll(/={1}/g, '%');}
+    HTML_Body_Content = HTML_Body_Content.replaceAll('%\n', '%');
+    HTML_Body_Content = HTML_Body_Content.replaceAll('%\r', '%');
+    HTML_Body_Content = HTML_Body_Content.replaceAll('\n%', '%');
+    HTML_Body_Content = HTML_Body_Content.replaceAll('\r%', '%');
+    HTML_Body_Content = HTML_Body_Content.replaceAll('%%', '%');
+    for (element of ['%E2%80%99','%C3%A9','%C3%AA','%C3%A8','%C3%A0', '%C2%A0','%20','%09','%3d']) {
+      log("    -> "+element+ " > "+decodeURI(element));
+      if(HTML_Body_Content.includes(element)){
+        HTML_Body_Content = HTML_Body_Content.replaceAll(element, decodeURI(element));}
+    }
+    HTML_Body_Content = HTML_Body_Content.replaceAll('%\n', '');
+    HTML_Body_Content = HTML_Body_Content.replaceAll('%\r', '');
+    
     SetHTML("Sample_Body",    HTML_Body_Content);
     
 
     if(debug>1){log("    -> Headers Update : "+OneSample.Headers);}
     if(OneSample.Headers.length>5){
       SetDisplay("Headers_Area","block");
-      SetHTML("Sample_Headers",    replaceTAG(OneSample.Headers));
+      var Headers_Content = "";
+      if(OneSample.Body.includes(" ")){
+        Headers_Content += replaceTAG(OneSample.Headers);
+      }else{
+        Headers_Content += replaceTAG(Base64.decode(OneSample.Headers));
+      }
+      SetHTML("Sample_Headers",    Headers_Content);
+      
     }else{
       SetDisplay("Headers_Area","none");
       SetHTML("Sample_Headers",    "");
@@ -353,7 +379,11 @@ function LoadFile(JSON_Fic,num=0){
           Test_Length=data.length;
         }
         final_list = shuffle(data).splice(0, Test_Length); 
-        
+        for (var i = 0; i < data.length; i++) { 
+          if(Array.isArray(data[i].Body)){
+            data[i].Body = data[i].Body.join("")
+          }
+        }
         Total = final_list.length;
         SetHTML("Exp_Infos",replaceTAG(messages.explanation_stp));
         
