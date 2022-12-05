@@ -1,6 +1,6 @@
 AddDefaultCharset utf-8
 Options -Indexes
-php_value open_basedir "/var/www/html/Didactic/JeuxPhishing_Outlook"
+php_value open_basedir "/var/www/html/Didactic/JeuxPhishing"
 
 <Files "*.csv">  
   Order allow,deny
