@@ -16,4 +16,4 @@ Il prend 10 exemples au hasard dans samples.json
 Vous pouvez aussi activer une journalisation des résultats (pour un lotterie par exemple).
 MAis dans ce cas fêtes attention a vos <font color="red">mentions et traitemenents RGPD</font>
 
-see it live <a href="https://secnews.physaphae.fr/Didactic/JeuxPhishing_Outlook/"> Exemple</a>
+see it live <a href="https://secnews.physaphae.fr/Didactic/JeuxPhishing/"> Exemple</a>
