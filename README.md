@@ -6,7 +6,7 @@ It takes 10 sample randomly in samples.json
 You can also add a "log" (to perform lotery for my case)
 But be very attentive for your <font color="red">RGPD compliances</font>
 
-See it live <a href="https://secnews.physaphae.fr/Didactic/JeuxPhishing_Outlook/"> French sample</a>
+See it live <a href="https://secnews.physaphae.fr/Didactic/JeuxPhishing/"> French sample</a>
 
 # [fr] Test de phishing
 
